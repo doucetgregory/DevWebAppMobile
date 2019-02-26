@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Ok</title>
-    </head>
-    
-    <body>
-        
-        <h1>Hello World !</h1>
-        
-    </body>
-    
+<head>
+    <meta charset="utf-8">
+    <title>Titre</title>
+</head>
+<body>
+
+<form id="form_actor_create">
+    <label for="player_name">Entrer le nom du joueur</label>
+    <input type="text" id="player_name" name="player_name">
+    <button type="button" id="btn_player_create">Créer le joueur</button>
+</form>
+
+
+<ul id="list_monsters"></ul>
+
+<form id="form_attack">
+    <button type="button" id="btn_attack">Attaquer</button>
+</form>
+
+<script type="module" src="./class/Firebase.js"></script>
+<script type="module" src="./class/Actor.js"></script>
+<script type="module" src="./class/Item.js"></script>
+<script type="module" src="./class/Monster.js"></script>
+<script type="module" src="./class/Player.js"></script>
+<script type="module" src="./main.js"></script>
+
+</body>
 </html>
