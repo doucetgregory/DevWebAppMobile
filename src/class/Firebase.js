@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import 'firebase/firestore';
 
 export default class Firebase {
     constructor(firebase) {
@@ -18,7 +18,7 @@ export default class Firebase {
 
     addUser(data, callback) {
         return new Promise((resolve, reject)=>{
-            this.db.collection("users").add(data).then(newData=>{
+            this.db.collection("actor").add(Object.assign({}, data)).then(newData=>{
                 console.log("Document written with ID : ", newData.id);
                 data.id = newData.id;
                 resolve(data);
